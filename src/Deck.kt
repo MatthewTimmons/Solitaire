@@ -8,6 +8,7 @@ class Deck {
     fun drawCard(): Card = cardsInDeck.removeAt(0)
     fun reset() {
         cardsInDeck = cards.toMutableList()
+        cardsInDeck.forEach { it.faceUp = false }
         Collections.shuffle(cardsInDeck)
     }
 
